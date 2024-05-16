@@ -7,6 +7,3 @@ then
 else
   echo "Homebrew already installed"
 fi
-
-brew update
-brew cleanup
