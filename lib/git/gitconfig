@@ -1,5 +1,6 @@
 [core]
   autocrlf = input
+  excludesfile = ~/.gitignore
   editor = /usr/local/bin/code --wait
 
 [user]
@@ -7,12 +8,13 @@
   email = josh.minnie@gmail.com
 
 [alias]
-  st = status -sb
-  co = checkout
   br = branch
-  prune = fetch -prune
-  mg = merge --no-commit
+  co = checkout
   ll = log --oneline
+  mg = merge --no-commit
+  po = push -u origin
+  prune = fetch -prune
+  st = status -sb
   up = pull --rebase --autostash
 
 [color]

@@ -8,6 +8,7 @@ default:
 
 git:
 	ln -sf "$(HOME)/.dotfiles/lib/git/gitconfig" "$(HOME)/.gitconfig"
+	ln -sf "$(HOME)/.dotfiles/lib/git/gitignore" "$(HOME)/.gitignore"
 
 shell:
 	ln -sfh "$(HOME)/.dotfiles/lib/shell/iTerm" "$(HOME)/.iTerm"
