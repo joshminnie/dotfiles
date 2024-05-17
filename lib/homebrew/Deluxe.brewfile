@@ -3,46 +3,34 @@
 tap "homebrew/bundle"
 tap "homebrew/services"
 
-# Programming Languages
-# ---------------------------------------------
-brew "node"
-brew "python"
-brew "python@3.12"
-
-# Development Tools
+# Software Development Tools and Languages
 # ---------------------------------------------
 brew "git"
-brew "imagemagick@6", link: true
-brew "mysql@5.7", restart_service: true
-brew "memcached", restart_service: true
+brew "libyaml"
+brew "node"
+brew "postgresql@15", restart_service: true
+brew "python@3.12"
 brew "yarn"
 
 # Project dependencies
 # ---------------------------------------------
+brew "imagemagick@6", link: true
+brew "memcached", restart_service: true
+brew "mysql@5.7", restart_service: true
 brew "opensearch", restart_service: true
 
-# CLI and dependencies
+# Supporting tools
 # ---------------------------------------------
-brew "autoconf"
 brew "automake"
-brew "c-ares"
 brew "openssl@3"
 brew "glib"
 brew "xorgproto"
 brew "openjpeg"
 brew "ghostscript"
-brew "libidn2"
-brew "nettle"
-brew "p11-kit"
-brew "unbound"
-brew "gnutls"
-brew "libksba"
-brew "pinentry"
 brew "gnupg"
 brew "harfbuzz"
 brew "libtool"
 brew "webp"
-brew "libyaml"
 brew "openssl@1.1"
 brew "protobuf"
 brew "openjdk"

@@ -1,0 +1,8 @@
+--database=postgresql
+-T
+--css tailwind
+--skip-keeps
+--skip-coffee
+--skip-turbolinks
+--skip-test
+--template=~/.rails/templates/default.rb
