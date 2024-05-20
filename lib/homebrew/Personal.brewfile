@@ -12,10 +12,18 @@ brew "postgresql@15", restart_service: true
 brew "python@3.12"
 brew "yarn"
 
+# Ruby dependencies
+# ---------------------------------------------
+brew "libtool"
+brew "pkg-config"
+brew "zlib"
+brew "openssl@1.1"
+
 # Supporting tools
 # ---------------------------------------------
 brew "automake"
 brew "gnupg"
+brew "openssl@3"
 
 # App Store
 # ---------------------------------------------

@@ -12,32 +12,27 @@ brew "postgresql@15", restart_service: true
 brew "python@3.12"
 brew "yarn"
 
+# Ruby dependencies
+# ---------------------------------------------
+brew "libtool"
+brew "pkg-config"
+brew "zlib"
+brew "openssl@1.1"
+
 # Project dependencies
 # ---------------------------------------------
+brew "ghostscript"
 brew "imagemagick@6", link: true
 brew "memcached", restart_service: true
 brew "mysql@5.7", restart_service: true
 brew "opensearch", restart_service: true
+brew "pdftk-java"
 
 # Supporting tools
 # ---------------------------------------------
 brew "automake"
-brew "openssl@3"
-brew "glib"
-brew "xorgproto"
-brew "openjpeg"
-brew "ghostscript"
 brew "gnupg"
-brew "harfbuzz"
-brew "libtool"
-brew "webp"
-brew "openssl@1.1"
-brew "protobuf"
-brew "openjdk"
-brew "openjdk@11"
-brew "pdftk-java"
-brew "pkg-config"
-brew "zlib"
+brew "openssl@3"
 
 # App Store
 # ---------------------------------------------
