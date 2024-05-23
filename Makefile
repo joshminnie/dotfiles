@@ -20,11 +20,12 @@ shell:
 
 homebrew:
 	@echo "Configuring homebrew..."
-	@echo "Using brewfile: $(brewfile).brewfile"
-	ln -sf $(HOME)/.dotfiles/lib/homebrew/$(brewfile).brewfile $(HOME)/Brewfile
 	@lib/homebrew/install.sh
+	ln -sf $(HOME)/.dotfiles/lib/homebrew/Brewfile $(HOME)/Brewfile
+	ln -sf $(HOME)/.dotfiles/lib/homebrew/Local.brewfile $(HOME)/Local.brewfile
 	brew update
 	brew bundle --file $(HOME)/Brewfile
+	brew bundle --file $(HOME)/Local.brewfile
 	brew cleanup
 
 ruby:

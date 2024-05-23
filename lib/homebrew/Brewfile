@@ -1,3 +1,5 @@
+# Base Brewfile for all machines
+
 # Brew Core
 # ---------------------------------------------
 tap "homebrew/bundle"
@@ -25,10 +27,16 @@ brew "automake"
 brew "gnupg"
 brew "openssl@3"
 
-# App Store
+# Applications
 # ---------------------------------------------
 brew "mas"
-mas "Things", id: 904280696
+
+cask_args appdir: "~/Applications", require_sha: true
+cask "iterm2"
+cask "alfred"
+cask "bartender"
+cask "cleanmymac"
+cask "postman"
 
 # VS Code Extensions
 # ---------------------------------------------
