@@ -30,9 +30,10 @@ homebrew:
 
 ruby:
 	@echo "Configuring Ruby..."
-	ln -sf "$(HOME)/.dotfiles/lib/git/gemrc" "$(HOME)/.gemrc"
-	ln -sf "$(HOME)/.dotfiles/lib/git/railsrc" "$(HOME)/.railsrc"
-	ln -sf "$(HOME)/.dotfiles/lib/git/rubocop.yml" "$(HOME)/.rubocop.yml"
+	ln -sf "$(HOME)/.dotfiles/lib/ruby/gemrc" "$(HOME)/.gemrc"
+	ln -sf "$(HOME)/.dotfiles/lib/ruby/railsrc" "$(HOME)/.railsrc"
+	ln -sf "$(HOME)/.dotfiles/lib/ruby/rubocop.yml" "$(HOME)/.rubocop.yml"
 	@lib/ruby/install.sh
+	gem install rails
 
 .PHONY: git shell homebrew ruby
