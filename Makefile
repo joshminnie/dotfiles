@@ -3,8 +3,14 @@ brewfile := "Personal"
 # 	$(error $(shell tput bold)$(shell tput setaf 1)brewfile is not defined; you must specify the brewfile name to use$(shell tput sgr0))
 # endif
 
-default:
-	@echo "This is no default for your own safety."
+default: git shell homebrew ruby
+
+help:
+	@echo "Available targets:" \
+		"\n  git\t\tConfigures git" \
+		"\n  shell\t\tConfigures zsh and oh-my-zsh" \
+		"\n  homebrew\tConfigures homebrew and installs applications and libraries" \
+		"\n  ruby\t\tConfigures Ruby on Rails environment"
 
 git:
 	@echo "Configuring git..."

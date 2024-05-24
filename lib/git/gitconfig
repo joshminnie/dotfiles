@@ -11,7 +11,7 @@
   br = branch
   co = checkout
   it = "!git init && git add . && git commit -m 'Initial commit'"
-  ll = log --oneline
+  ls = log --oneline
   mg = merge --no-commit
   po = push -u origin
   prune = fetch -prune
