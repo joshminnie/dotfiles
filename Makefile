@@ -16,17 +16,13 @@ shell:
 	ln -sfh "$(HOME)/.dotfiles/lib/shell/iTerm" "$(HOME)/.iTerm"
 	ln -sfh "$(HOME)/.dotfiles/lib/shell/zsh-custom/" "$(HOME)/.zsh-custom"
 	ln -sf "$(HOME)/.dotfiles/lib/shell/zshrc.zsh" "$(HOME)/.zshrc"
-	@lib/shell/install.sh
+	@lib/shell/install.zsh
 
 homebrew:
 	@echo "Configuring homebrew..."
-	@lib/homebrew/install.sh
 	ln -sf $(HOME)/.dotfiles/lib/homebrew/Brewfile $(HOME)/Brewfile
 	ln -sf $(HOME)/.dotfiles/lib/homebrew/Local.brewfile $(HOME)/Local.brewfile
-	brew update
-	brew bundle --file $(HOME)/Brewfile
-	brew bundle --file $(HOME)/Local.brewfile
-	brew cleanup
+	@lib/homebrew/install.zsh
 
 ruby:
 	@echo "Configuring Ruby..."

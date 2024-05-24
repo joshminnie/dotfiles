@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 if ! command -v brew &> /dev/null
 then
@@ -7,3 +7,8 @@ then
 else
   echo "Homebrew already installed"
 fi
+
+brew update
+brew bundle --file ~/Brewfile
+brew bundle --file ~/Local.brewfile
+brew cleanup

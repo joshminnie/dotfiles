@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 set -a
 
 if [ -d "~/.oh-my-zsh" ]; then
