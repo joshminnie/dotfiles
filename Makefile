@@ -34,6 +34,5 @@ ruby:
 	ln -sf "$(HOME)/.dotfiles/lib/ruby/railsrc" "$(HOME)/.railsrc"
 	ln -sf "$(HOME)/.dotfiles/lib/ruby/rubocop.yml" "$(HOME)/.rubocop.yml"
 	@lib/ruby/install.sh
-	gem install rails
 
 .PHONY: git shell homebrew ruby

@@ -6,7 +6,7 @@ AllCops:
     - 'lib/generators/**/*'
     - 'vendor/**/*'
   DisplayCopNames: true
-  TargetRubyVersion: 3.2.0
+  TargetRubyVersion: 3.3.1
 
 # --------
 
@@ -21,9 +21,3 @@ Style/Documentation:
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
-
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
-Style/SymbolArray:
-  Enabled: false

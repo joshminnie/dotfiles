@@ -5,4 +5,3 @@
 --skip-coffee
 --skip-turbolinks
 --skip-test
---template=~/.rails/templates/default.rb
