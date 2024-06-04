@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+      "*.brewfile": "ruby"
+    },
+    "material-icon-theme.files.associations": {
+      "gitignore": "git",
+      "railsrc": "settings",
+      "gemrc": "settings"
+    }
+}
