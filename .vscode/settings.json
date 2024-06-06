@@ -1,10 +1,10 @@
 {
-    "files.associations": {
-      "*.brewfile": "ruby"
-    },
-    "material-icon-theme.files.associations": {
-      "gitignore": "git",
-      "railsrc": "settings",
-      "gemrc": "settings"
-    }
+    // Soft 2-space tabs
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    // Trailing whitespace
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
 }

@@ -38,4 +38,9 @@ ruby:
 	ln -sfh "$(HOME)/.dotfiles/lib/ruby/.rails" "$(HOME)/.rails"
 	@lib/ruby/install.zsh
 
-.PHONY: git shell homebrew ruby
+vscode:
+	@echo "Configuring VS Code..."
+	mv "$(HOME)/Library/Application Support/Code/User/snippets" "$(HOME)/Library/Application Support/Code/User/snippets.old"
+	ln -sfh "$(HOME)/.dotfiles/lib/vscode/snippets" "$(HOME)/Library/Application Support/Code/User/snippets"
+
+.PHONY: git shell homebrew ruby vscode

@@ -1,0 +1,26 @@
+{
+  "Release pull request": {
+    "prefix": "release",
+    "body": [
+      "# ${1:v$CURRENT_YEAR_SHORT.${2}} Release",
+      "",
+      "**JIRA Release**: [$1](https://deluxe.atlassian.net/projects/EPAY/versions/${3:#})",
+      "",
+      "> Example: Tag [`$1`](https://github.com/verifyvalid/VerifyValid/releases/tag/$1) is the tag for the deploy of this release.",
+      "",
+      "### Pre-deploy instructions",
+      "",
+      "None.",
+      "",
+      "### Post-deploy instructions",
+      "",
+      "None.",
+      "",
+      "### Rollback considerations",
+      "",
+      "None.",
+      ""
+    ],
+    "description": "Release pull request template"
+  }
+}
