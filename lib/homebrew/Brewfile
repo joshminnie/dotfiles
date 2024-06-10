@@ -38,6 +38,7 @@ cask "cleanmymac"
 cask "docker"
 cask "iterm2"
 cask "postman"
+cask "visual-studio-code"
 cask "zoom"
 
 # VS Code Extensions
