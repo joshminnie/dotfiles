@@ -26,8 +26,6 @@ shell:
 
 homebrew:
 	@echo "Configuring homebrew..."
-	ln -sf $(HOME)/.dotfiles/lib/homebrew/Brewfile $(HOME)/Brewfile
-	ln -sf $(HOME)/.dotfiles/lib/homebrew/Local.brewfile $(HOME)/Local.brewfile
 	@lib/homebrew/install.zsh
 
 ruby:

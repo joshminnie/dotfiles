@@ -41,6 +41,11 @@ cask "postman"
 cask "visual-studio-code"
 cask "zoom"
 
+# Applications
+# ---------------------------------------------
+cask "font-roboto-mono"
+cask "font-source-code-pro"
+
 # VS Code Extensions
 # ---------------------------------------------
 vscode "akamud.vscode-theme-onedark"

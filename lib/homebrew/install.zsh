@@ -8,6 +8,9 @@ else
   echo "Homebrew already installed"
 fi
 
+ln -sf ~/.dotfiles/lib/homebrew/Brewfile ~/Brewfile
+ln -sf ~/.dotfiles/lib/homebrew/Local.brewfile ~/Local.brewfile
+
 brew update
 brew bundle --file ~/Brewfile
 brew bundle --file ~/Local.brewfile
