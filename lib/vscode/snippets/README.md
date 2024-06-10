@@ -9,6 +9,7 @@ is what is used to trigger the snippet and the body will be expanded and inserte
 * `${1:label}`, `${2:another}` for placeholders. Placeholders with the same ids are connected.
 
 Example
+
 ```json
 {
   "Print to console": {
