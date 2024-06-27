@@ -37,6 +37,7 @@ cask "alfred"
 cask "bartender"
 cask "cleanmymac"
 cask "docker"
+cask "google-chrome", args: { require_sha: false }
 cask "iterm2"
 cask "postman"
 cask "visual-studio-code"
