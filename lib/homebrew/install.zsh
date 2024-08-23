@@ -14,4 +14,6 @@ ln -sf ~/.dotfiles/lib/homebrew/Local.brewfile ~/Local.brewfile
 brew update
 brew bundle --file ~/Brewfile
 brew bundle --file ~/Local.brewfile
+brew upgrade $(brew outdated --cask --greedy --quiet)
+brew upgrade $(brew outdated --greedy --quiet)
 brew cleanup
