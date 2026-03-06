@@ -30,6 +30,7 @@ brew "openssl@3"
 # Applications
 # ---------------------------------------------
 brew "mas"
+mas "Things", id: 904280696
 
 cask_args appdir: "/Applications", require_sha: true
 cask "1password"
@@ -99,8 +100,6 @@ vscode "redhat.java"
 vscode "redhat.vscode-yaml"
 vscode "shopify.ruby-lsp"
 vscode "stylelint.vscode-stylelint"
-vscode "visualstudioexptteam.intellicode-api-usage-examples"
-vscode "visualstudioexptteam.vscodeintellicode"
 vscode "vscjava.vscode-gradle"
 vscode "vscjava.vscode-java-debug"
 vscode "vscjava.vscode-java-dependency"
