@@ -14,21 +14,18 @@ help:
 
 git:
 	@echo "Configuring git..."
-	@test -n "$(GIT_AUTHOR_EMAIL)" || (echo "Error: GIT_AUTHOR_EMAIL is not set. Run: make git GIT_AUTHOR_EMAIL=you@example.com"; exit 1)
-	@[ -L "$(HOME)/.gitconfig" ] && rm "$(HOME)/.gitconfig" || true
-	envsubst < "$(HOME)/.dotfiles/lib/git/gitconfig.tmpl" > "$(HOME)/.gitconfig"
-	ln -sf "$(HOME)/.dotfiles/lib/git/gitignore" "$(HOME)/.gitignore"
+	@zsh lib/git/install.zsh
 
 shell:
 	@echo "Configuring shell..."
 	ln -sfh "$(HOME)/.dotfiles/lib/shell/iTerm" "$(HOME)/.iTerm"
 	ln -sfh "$(HOME)/.dotfiles/lib/shell/zsh-custom/" "$(HOME)/.zsh-custom"
 	ln -sf "$(HOME)/.dotfiles/lib/shell/zshrc.zsh" "$(HOME)/.zshrc"
-	@lib/shell/install.zsh
+	@zsh lib/shell/install.zsh
 
 homebrew:
 	@echo "Configuring homebrew..."
-	@lib/homebrew/install.zsh
+	@zsh lib/homebrew/install.zsh
 
 ruby:
 	@echo "Configuring Ruby..."
@@ -36,7 +33,7 @@ ruby:
 	ln -sf "$(HOME)/.dotfiles/lib/ruby/railsrc" "$(HOME)/.railsrc"
 	ln -sf "$(HOME)/.dotfiles/lib/ruby/rubocop.yml" "$(HOME)/.rubocop.yml"
 	ln -sfh "$(HOME)/.dotfiles/lib/ruby/.rails" "$(HOME)/.rails"
-	@lib/ruby/install.zsh
+	@zsh lib/ruby/install.zsh
 
 vscode:
 	@echo "Configuring VS Code..."
