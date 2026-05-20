@@ -8,12 +8,15 @@ else
   echo "Homebrew already installed"
 fi
 
+if [ -L "$HOME/Local.brewfile" ]; then
+  echo "Removing existing Local.brewfile symlink"
+  rm "$HOME/Local.brewfile"
+fi
+
 ln -sf ~/.dotfiles/lib/homebrew/Brewfile ~/Brewfile
-ln -sf ~/.dotfiles/lib/homebrew/Local.brewfile ~/Local.brewfile
 
 brew update
 brew bundle --file ~/Brewfile
-brew bundle --file ~/Local.brewfile
 brew upgrade $(brew outdated --cask --greedy --quiet)
 brew upgrade $(brew outdated --greedy --quiet)
 brew cleanup

@@ -48,6 +48,11 @@ cask "postman"
 cask "visual-studio-code"
 cask "zoom"
 
+if ENV["COMPANY"] != "DELUXE"
+  cask "discord"
+  cask "fantastical"
+end
+
 # Applications
 # ---------------------------------------------
 cask_args require_sha: false # Most fonts don't have a SHA defined.
@@ -56,6 +61,9 @@ cask "font-source-code-pro"
 
 # VS Code Extensions
 # ---------------------------------------------
+if ENV["COMPANY"] == "DELUXE"
+  vscode "atlassian.atlascode"
+end
 vscode "bradlc.vscode-tailwindcss"
 vscode "bruno-api-client.bruno"
 vscode "dart-code.dart-code"
@@ -64,12 +72,10 @@ vscode "davidanson.vscode-markdownlint"
 vscode "docker.docker"
 vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
-vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "github.github-vscode-theme"
 vscode "github.vscode-pull-request-github"
 vscode "golang.go"
-vscode "grapecity.gc-excelviewer"
 vscode "janisdd.vscode-edit-csv"
 vscode "mechatroner.rainbow-csv"
 vscode "mikestead.dotenv"
