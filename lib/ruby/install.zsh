@@ -16,6 +16,6 @@ type rvm | head -n 1
 
 # Prep rvm usage
 rvm cleanup all
-rvm install 3.3.1 --with-openssl-dir=$(brew --prefix openssl@1.1)
-rvm --default use 3.3.1
+rvm install 3.4.8
+rvm --default use 3.4.8
 gem install rails
