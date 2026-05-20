@@ -14,7 +14,9 @@ help:
 
 git:
 	@echo "Configuring git..."
-	ln -sf "$(HOME)/.dotfiles/lib/git/gitconfig" "$(HOME)/.gitconfig"
+	@test -n "$(GIT_AUTHOR_EMAIL)" || (echo "Error: GIT_AUTHOR_EMAIL is not set. Run: make git GIT_AUTHOR_EMAIL=you@example.com"; exit 1)
+	@[ -L "$(HOME)/.gitconfig" ] && rm "$(HOME)/.gitconfig" || true
+	envsubst < "$(HOME)/.dotfiles/lib/git/gitconfig.tmpl" > "$(HOME)/.gitconfig"
 	ln -sf "$(HOME)/.dotfiles/lib/git/gitignore" "$(HOME)/.gitignore"
 
 shell:

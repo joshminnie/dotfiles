@@ -5,7 +5,7 @@
 
 [user]
   name = Josh Minnie
-  email = josh.minnie@gmail.com
+  email = ${GIT_AUTHOR_EMAIL}
 
 [alias]
   br = branch
@@ -17,7 +17,7 @@
   prune = fetch -prune
   st = status -sb
   up = pull --rebase --autostash
-
+  coup = "!git co \"$1\" && git up #"
 
 [color]
   branch = auto

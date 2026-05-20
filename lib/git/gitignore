@@ -51,3 +51,9 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Temporary files
+# -----------------------------------------------------------------------------
+
+tmp/pids
+tmp/storage
