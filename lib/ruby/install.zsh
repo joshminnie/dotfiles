@@ -37,6 +37,9 @@ export PKG_CONFIG_PATH="$OPENSSL_PREFIX/lib/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CO
 rvm autolibs disable
 
 RUBY_VERSION="3.4.8"
+TARGET_RUBY="ruby-$RUBY_VERSION"
+
+echo "Target Ruby version: $RUBY_VERSION"
 if rvm list strings | grep -q "ruby-$RUBY_VERSION"; then
   echo "Ruby $RUBY_VERSION already installed"
 else
@@ -46,6 +49,16 @@ else
   rvm --default use "$RUBY_VERSION"
   echo "RVM and Ruby $RUBY_VERSION installed successfully!"
 fi
+
+# Remove all installed MRI Ruby versions except the target version.
+INSTALLED_RUBIES=("${(@f)$(rvm list strings | grep '^ruby-')}")
+for INSTALLED_RUBY in "${INSTALLED_RUBIES[@]}"
+do
+  if [[ "$INSTALLED_RUBY" != "$TARGET_RUBY" ]]; then
+    echo "Removing Ruby version: $INSTALLED_RUBY"
+    rvm remove "$INSTALLED_RUBY"
+  fi
+done
 
 echo "Using Ruby version: $(ruby -v)"
 echo "Installing Rails gem..."
