@@ -57,7 +57,7 @@ cask "postman"
 cask "visual-studio-code"
 cask "zoom"
 
-if ENV["COMPANY"] != "DELUXE"
+if ENV["COMPANY"] == "HOME"
   cask "discord"
   cask "fantastical"
 end
