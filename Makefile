@@ -15,26 +15,27 @@ help:
 git:
 	@echo "Configuring git..."
 	@zsh lib/git/install.zsh
+	@echo "Completed configuring git!"
 
 shell:
 	@echo "Configuring shell..."
 	@zsh lib/shell/install.zsh
+	@echo "Completed configuring shell!"
 
 homebrew:
 	@echo "Configuring homebrew..."
 	@zsh lib/homebrew/install.zsh
+	@echo "Completed configuring homebrew!"
 
 ruby:
 	@echo "Configuring Ruby..."
-	ln -sf "$(HOME)/.dotfiles/lib/ruby/gemrc" "$(HOME)/.gemrc"
-	ln -sf "$(HOME)/.dotfiles/lib/ruby/railsrc" "$(HOME)/.railsrc"
-	ln -sf "$(HOME)/.dotfiles/lib/ruby/rubocop.yml" "$(HOME)/.rubocop.yml"
-	ln -sfh "$(HOME)/.dotfiles/lib/ruby/.rails" "$(HOME)/.rails"
 	@zsh lib/ruby/install.zsh
+	@echo "Completed configuring Ruby!"
 
 vscode:
 	@echo "Configuring VS Code..."
 	mv "$(HOME)/Library/Application Support/Code/User/snippets" "$(HOME)/Library/Application Support/Code/User/snippets.old"
 	ln -sfh "$(HOME)/.dotfiles/lib/vscode/snippets" "$(HOME)/Library/Application Support/Code/User/snippets"
+	@echo "Completed configuring VS Code!"
 
 .PHONY: git shell homebrew ruby vscode

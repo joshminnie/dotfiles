@@ -1,5 +1,12 @@
 #!/bin/zsh
 
+set -e
+
+ln -sf "$HOME/.dotfiles/lib/ruby/gemrc" "$HOME/.gemrc"
+ln -sf "$HOME/.dotfiles/lib/ruby/railsrc" "$HOME/.railsrc"
+ln -sf "$HOME/.dotfiles/lib/ruby/rubocop.yml" "$HOME/.rubocop.yml"
+ln -sfh "$HOME/.dotfiles/lib/ruby/.rails" "$HOME/.rails"
+
 if ! command -v rvm &> /dev/null
 then
   # Install RVM
@@ -14,8 +21,34 @@ fi
 source ~/.rvm/scripts/rvm
 type rvm | head -n 1
 
-# Prep rvm usage
-rvm cleanup all
-rvm install 3.4.8
-rvm --default use 3.4.8
+if ! command -v brew &> /dev/null
+then
+  echo "Homebrew is required to install Ruby dependencies"
+  exit 1
+fi
+
+brew install pkg-config openssl@3
+OPENSSL_PREFIX="$(brew --prefix openssl@3)"
+
+# Use Homebrew-provided OpenSSL and skip RVM autolibs to avoid openssl@1.1 installs.
+export LDFLAGS="-L$OPENSSL_PREFIX/lib"
+export CPPFLAGS="-I$OPENSSL_PREFIX/include"
+export PKG_CONFIG_PATH="$OPENSSL_PREFIX/lib/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PATH}"
+rvm autolibs disable
+
+RUBY_VERSION="3.4.8"
+if rvm list strings | grep -q "ruby-$RUBY_VERSION"; then
+  echo "Ruby $RUBY_VERSION already installed"
+else
+  echo "Installing Ruby $RUBY_VERSION with OpenSSL support..."
+  rvm cleanup all
+  rvm install "$RUBY_VERSION" --with-openssl-dir="$OPENSSL_PREFIX"
+  rvm --default use "$RUBY_VERSION"
+  echo "RVM and Ruby $RUBY_VERSION installed successfully!"
+fi
+
+echo "Using Ruby version: $(ruby -v)"
+echo "Installing Rails gem..."
 gem install rails
+echo "Updating RubyGems system software..."
+gem update --system

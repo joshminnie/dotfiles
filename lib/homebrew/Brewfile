@@ -20,13 +20,12 @@ brew "yarn"
 brew "libtool"
 brew "pkg-config"
 brew "zlib"
-brew "openssl@1.1"
+brew "openssl@3"
 
 # Supporting tools
 # ---------------------------------------------
 brew "automake"
 brew "gnupg"
-brew "openssl@3"
 
 if ENV["COMPANY"] == "DELUXE"
   brew "ghostscript"
