@@ -11,10 +11,14 @@ if [ -e "$HOME/.gitconfig" ]; then
   echo "Removing existing .gitconfig"
   rm -f "$HOME/.gitconfig"
 fi
+
+echo "Generating .gitconfig from template..."
 envsubst < "$HOME/.dotfiles/lib/git/gitconfig.tmpl" > "$HOME/.gitconfig"
 
 if [ -e "$HOME/.gitignore" ]; then
   echo "Removing existing .gitignore"
   rm -f "$HOME/.gitignore"
 fi
+
+echo "Linking .gitignore..."
 ln -sf "$HOME/.dotfiles/lib/git/gitignore" "$HOME/.gitignore"
