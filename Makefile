@@ -18,9 +18,6 @@ git:
 
 shell:
 	@echo "Configuring shell..."
-	ln -sfh "$(HOME)/.dotfiles/lib/shell/iTerm" "$(HOME)/.iTerm"
-	ln -sfh "$(HOME)/.dotfiles/lib/shell/zsh-custom/" "$(HOME)/.zsh-custom"
-	ln -sf "$(HOME)/.dotfiles/lib/shell/zshrc.zsh" "$(HOME)/.zshrc"
 	@zsh lib/shell/install.zsh
 
 homebrew:
