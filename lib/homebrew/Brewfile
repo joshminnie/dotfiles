@@ -31,7 +31,7 @@ if ENV["COMPANY"] == "DELUXE"
   brew "ghostscript"
   brew "imagemagick@6", link: true
   brew "memcached", restart_service: true
-  brew "mysql@8.4", restart_service: true
+  brew "mysql@8.0", restart_service: true
   brew "opensearch", restart_service: true
   brew "pdftk-java"
   brew "rust"

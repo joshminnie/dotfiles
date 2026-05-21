@@ -3,7 +3,9 @@ brewfile := "Personal"
 # 	$(error $(shell tput bold)$(shell tput setaf 1)brewfile is not defined; you must specify the brewfile name to use$(shell tput sgr0))
 # endif
 
-default: git shell homebrew ruby
+default: all
+
+all: git shell homebrew ruby vscode
 
 help:
 	@echo "Available targets:" \
@@ -34,8 +36,7 @@ ruby:
 
 vscode:
 	@echo "Configuring VS Code..."
-	mv "$(HOME)/Library/Application Support/Code/User/snippets" "$(HOME)/Library/Application Support/Code/User/snippets.old"
-	ln -sfh "$(HOME)/.dotfiles/lib/vscode/snippets" "$(HOME)/Library/Application Support/Code/User/snippets"
+	@zsh lib/vscode/install.zsh
 	@echo "Completed configuring VS Code!"
 
-.PHONY: git shell homebrew ruby vscode
+.PHONY: all git shell homebrew ruby vscode
