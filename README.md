@@ -1,5 +1,7 @@
 # dotfiles
 
+## Install Developer Tools
+
 ## Commands
 
 | Command         | Description |

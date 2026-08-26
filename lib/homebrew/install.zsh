@@ -3,7 +3,7 @@
 if ! command -v brew &> /dev/null
 then
   echo "Installing Homebrew..."
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  unset POSIXLY_CORRECT && sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
   echo "Homebrew already installed"
 fi
