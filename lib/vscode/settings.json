@@ -1,0 +1,367 @@
+{
+  // Window
+  // -----------------------------------------------------------------------------
+  "window.title": "${folderName}${separator}${activeEditorShort}",
+  // Workbench
+  // -----------------------------------------------------------------------------
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.preferredDarkColorTheme": "Atom One Dark",
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#3e4041",
+    "gitDecoration.ignoredResourceForeground": "#454545",
+    "activityBar.activeBorder": "#0d6bc7",
+    "activityBar.activeBackground": "#2f425c",
+    "[Vira*]": {
+      "toolbar.activeBackground": "#80CBC426",
+      "activityBarBadge.background": "#80CBC4",
+      "activityBar.activeBorder": "#80CBC4",
+      "activityBarTop.activeBorder": "#80CBC4",
+      "list.inactiveSelectionIconForeground": "#80CBC4",
+      "list.activeSelectionForeground": "#80CBC4",
+      "list.inactiveSelectionForeground": "#80CBC4",
+      "list.highlightForeground": "#80CBC4",
+      "sash.hoverBorder": "#80CBC480",
+      "list.activeSelectionIconForeground": "#80CBC4",
+      "scrollbarSlider.activeBackground": "#80CBC480",
+      "editorSuggestWidget.highlightForeground": "#80CBC4",
+      "textLink.foreground": "#80CBC4",
+      "progressBar.background": "#80CBC4",
+      "pickerGroup.foreground": "#80CBC4",
+      "tab.activeBorder": "#80CBC4",
+      "notificationLink.foreground": "#80CBC4",
+      "editorWidget.resizeBorder": "#80CBC4",
+      "editorWidget.border": "#80CBC4",
+      "settings.modifiedItemIndicator": "#80CBC4",
+      "panelTitle.activeBorder": "#80CBC4",
+      "breadcrumb.activeSelectionForeground": "#80CBC4",
+      "menu.selectionForeground": "#80CBC4",
+      "menubar.selectionForeground": "#80CBC4",
+      "editor.findMatchBorder": "#80CBC4",
+      "selection.background": "#80CBC440",
+      "statusBarItem.remoteBackground": "#80CBC414",
+      "notebook.inactiveFocusedCellBorder": "#80CBC480",
+      "commandCenter.activeBorder": "#80CBC480",
+      "button.background": "#80CBC4",
+      "button.hoverBackground": "#80CBC4cc",
+      "extensionButton.separator": "#80CBC433",
+      "extensionButton.background": "#80CBC414",
+      "extensionButton.foreground": "#80CBC4",
+      "extensionButton.hoverBackground": "#80CBC433",
+      "extensionButton.prominentForeground": "#80CBC4",
+      "extensionButton.prominentBackground": "#80CBC414",
+      "extensionButton.prominentHoverBackground": "#80CBC433",
+      "statusBarItem.remoteHoverBackground": "#80CBC4",
+      "statusBarItem.remoteForeground": "#80CBC4",
+      "chat.slashCommandForeground": "#80CBC4",
+      "chat.avatarForeground": "#80CBC4",
+      "activityBarBadge.foreground": "#000000",
+      "button.foreground": "#000000",
+      "statusBarItem.remoteHoverForeground": "#000000"
+    }
+  },
+  "workbench.editor.pinnedTabSizing": "normal",
+  "workbench.editor.wrapTabs": false,
+  "workbench.editor.decorations.badges": true,
+  "workbench.editor.decorations.colors": true,
+  // Editor
+  // -----------------------------------------------------------------------------
+  "editor.detectIndentation": false,
+  "editor.fontFamily": "SourceCodeProRoman-Light, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 13,
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "200",
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 2,
+  "editor.useTabStops": true,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "editor.wordWrapColumn": 131,
+  "editor.cursorStyle": "line-thin",
+  "editor.rulers": [
+    131
+  ],
+  "editor.renderControlCharacters": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.indentSize": "tabSize",
+  // Theme customizations
+  "editor.tokenColorCustomizations": {
+    "[Atom One Dark]": {
+      "comments": "#808897",
+      "textMateRules": [
+        {
+          "scope": "punctuation.definition.comment",
+          "settings": {
+            "foreground": "#808897"
+          }
+        }
+      ]
+    }
+  },
+  // Material icon theme
+  "material-icon-theme.files.associations": {
+    ".reek": "yaml",
+    ".simplecov": "yaml",
+    ".jsbeautifyrc": "yaml",
+    "gitignore": "git",
+    "railsrc": "settings",
+    "gemrc": "settings"
+  },
+  // Files
+  // -----------------------------------------------------------------------------
+  "files.defaultLanguage": "${activeEditorLanguage}",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.associations": {
+    "*.brewfile": "ruby"
+  },
+  // Terminal
+  // -----------------------------------------------------------------------------
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontFamily": "SourceCodePro-Light, Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.external.osxExec": "iTerm.app",
+  // Searching and tree view
+  // -----------------------------------------------------------------------------
+  "files.exclude": {
+    "**/.sass-cache": true,
+    "**/.yardoc": true,
+    "**/log": true,
+    "**/tmp": true,
+    "**/vendor/cache": true
+  },
+  "search.exclude": {
+    ".git/**/*": true,
+    "bower_components/**/*": true,
+    "coverage/**/*": true,
+    "log/**/*": true,
+    "node_modules/**/*": true,
+    "public/uploads/**/*": true,
+    "**/tmp": true,
+    "**/vendor/cache": true,
+  },
+  // Git
+  // -----------------------------------------------------------------------------
+  "diffEditor.renderSideBySide": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "scm.alwaysShowActions": true,
+  "git.autofetch": "all",
+  "git.confirmSync": false,
+  // GitHub pull requests
+  "githubPullRequests.defaultMergeMethod": "squash",
+  "githubPullRequests.pullBranch": "never",
+  "githubPullRequests.queries": [
+    {
+      "label": "Local Pull Request Branches",
+      "query": "default"
+    },
+    {
+      "label": "Waiting For My Review",
+      "query": "repo:${owner}/${repository} is:open review-requested:${user}"
+    },
+    {
+      "label": "Assigned To Me",
+      "query": "repo:${owner}/${repository} is:open assignee:${user}"
+    },
+    {
+      "label": "Created By Me",
+      "query": "repo:${owner}/${repository} is:open author:${user}"
+    },
+    {
+      "label": "Involves Me",
+      "query": "repo:${owner}/${repository} is:open involves:${user}"
+    },
+    {
+      "label": "Automation Passing (unlabeled)",
+      "query": "repo:${owner}/${repository} is:open is:pr status:success -label:auto-tests-passing"
+    },
+    {
+      "label": "Ready for Merge",
+      "query": "repo:${owner}/${repository} is:open is:pr label:auto-tests-passing label:review-approved"
+    },
+    {
+      "label": "No milestone",
+      "query": "repo:${owner}/${repository} is:open is:pr no:milestone"
+    },
+    {
+      "label": "Merged without milestone",
+      "query": "repo:${owner}/${repository} is:pr is:closed is:merged no:milestone"
+    },
+    {
+      "label": "All Open",
+      "query": "default"
+    }
+  ],
+  "githubIssues.createIssueTriggers": [
+    "TODO",
+    "BUG",
+    "FIXME",
+    "ISSUE",
+    "HACK"
+  ],
+  // GitLens
+  "gitlens.codeLens.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.views.branches.pullRequests.enabled": false,
+  "gitlens.views.branches.showBranchComparison": false,
+  "gitlens.autolinks": [
+    {
+      "prefix": "EPAY-",
+      "url": "https://deluxe.atlassian.net/browse/EPAY-<num>"
+    }
+  ],
+  // Language specific settings
+  // -----------------------------------------------------------------------------
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      131
+    ],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off"
+  },
+  "dart.openDevTools": "flutter",
+  "dart.closingLabels": false,
+  "dart.lineLength": 131,
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    }
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[ruby]": {},
+  "rubyLsp.rubyVersionManager": {
+    "identifier": "rvm"
+  },
+  "[sql]": {
+    "editor.tabSize": 4,
+    "editor.formatOnPaste": false
+  },
+  // Extensions
+  // -----------------------------------------------------------------------------
+  // Eslint
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  // Emmet
+  "emmet.triggerExpansionOnTab": true, // Expand Emmet suggestions with tab
+  "emmet.showSuggestionsAsSnippets": true, //
+  "editor.snippetSuggestions": "top", // Force Emmet suggestion to be at the top
+  "emmet.syntaxProfiles": {
+    "html": {
+      "attr_quotes": "double"
+    }
+  },
+  // CSScomb
+  "csscomb.preset": {
+    "remove-empty-rulesets": true,
+    "always-semicolon": true,
+    "color-case": "lower",
+    "block-indent": "  ",
+    "color-shorthand": true,
+    "element-case": "lower",
+    "eof-newline": true,
+    "leading-zero": true,
+    "quotes": "single",
+    "space-before-colon": "",
+    "space-after-colon": " ",
+    "space-before-combinator": " ",
+    "space-after-combinator": " ",
+    "space-between-declarations": "\n",
+    "space-before-opening-brace": " ",
+    "space-after-opening-brace": "\n",
+    "space-after-selector-delimiter": "\n",
+    "space-before-selector-delimiter": "",
+    "space-before-closing-brace": "\n",
+    "strip-spaces": true,
+    "tab-size": true,
+    "unitless-zero": true
+  },
+  "task.problemMatchers.neverPrompt": {
+    "rake": true,
+    "process": true
+  },
+  "task.slowProviderWarning": [
+    "rake"
+  ],
+  // Gherkin
+  "cucumberautocomplete.steps": [
+    "features/step_definitions/**/*_steps.rb"
+  ],
+  "[feature]": {
+    "editor.defaultFormatter": "siarheikuchuk.gherkin-beautifier-vs-code-plugin"
+  },
+  // Unknown settings
+  // -----------------------------------------------------------------------------
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "remote.extensionKind": {
+    "pub.name": [
+      "ui"
+    ]
+  },
+  "liveshare.launcherClient": "web",
+  "pgsql.serverGroups": [
+    {
+      "name": "Servers",
+      "id": "A8C24D62-4F07-452F-9396-FC3D94EB5D7D",
+      "isDefault": true
+    }
+  ],
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true,
+    "/var/folders/tm/qlyccw553gjf83pq8jxy_60w0000gr/T/postman-collections-post-response.instructions.md": true,
+    "/var/folders/tm/qlyccw553gjf83pq8jxy_60w0000gr/T/postman-collections-pre-request.instructions.md": true,
+    "/var/folders/tm/qlyccw553gjf83pq8jxy_60w0000gr/T/postman-folder-post-response.instructions.md": true,
+    "/var/folders/tm/qlyccw553gjf83pq8jxy_60w0000gr/T/postman-folder-pre-request.instructions.md": true,
+    "/var/folders/tm/qlyccw553gjf83pq8jxy_60w0000gr/T/postman-http-request-post-response.instructions.md": true,
+    "/var/folders/tm/qlyccw553gjf83pq8jxy_60w0000gr/T/postman-http-request-pre-request.instructions.md": true,
+    "/var/folders/0h/dl1tv5wd0hgdgrr_qrbdgpnh0000gn/T/postman-collections-post-response.instructions.md": true,
+    "/var/folders/0h/dl1tv5wd0hgdgrr_qrbdgpnh0000gn/T/postman-collections-pre-request.instructions.md": true,
+    "/var/folders/0h/dl1tv5wd0hgdgrr_qrbdgpnh0000gn/T/postman-folder-post-response.instructions.md": true,
+    "/var/folders/0h/dl1tv5wd0hgdgrr_qrbdgpnh0000gn/T/postman-folder-pre-request.instructions.md": true,
+    "/var/folders/0h/dl1tv5wd0hgdgrr_qrbdgpnh0000gn/T/postman-http-request-post-response.instructions.md": true,
+    "/var/folders/0h/dl1tv5wd0hgdgrr_qrbdgpnh0000gn/T/postman-http-request-pre-request.instructions.md": true
+  },
+  "postman.mcp.notifications.postmanMCP": false,
+  "redhat.telemetry.enabled": true,
+  "makefile.configureOnOpen": false,
+  "mdb.mcp.server": "prompt",
+  "githubIssues.queries": [
+    {
+      "label": "My Issues",
+      "query": "is:open assignee:${user} repo:${owner}/${repository}",
+      "groupBy": [
+        "milestone"
+      ]
+    },
+    {
+      "label": "Created Issues",
+      "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+    },
+    {
+      "label": "Recent Issues",
+      "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+    }
+  ],
+  "docker.extension.enableComposeLanguageServer": false,
+  "atlascode.jira.enabled": true,
+  "atlascode.rovodev.showEntitlementNotifications": false,
+  "chat.viewSessions.orientation": "stacked",
+  "resharper.region.region": "Americas",
+  "resharper.dataSharing.allowDataSharing": false,
+  "docker.extension.dockerEngineAvailabilityPrompt": false,
+  "gitlens.graph.details.location": "auto"
+}
