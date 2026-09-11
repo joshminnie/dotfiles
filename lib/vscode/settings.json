@@ -6,7 +6,7 @@
   // -----------------------------------------------------------------------------
   "workbench.startupEditor": "none",
   "workbench.iconTheme": "vscode-icons",
-  "workbench.preferredDarkColorTheme": "Atom One Dark",
+  "workbench.preferredDarkColorTheme": "Dark 2026",
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#3e4041",
     "gitDecoration.ignoredResourceForeground": "#454545",
@@ -87,7 +87,7 @@
   "editor.indentSize": "tabSize",
   // Theme customizations
   "editor.tokenColorCustomizations": {
-    "[Atom One Dark]": {
+    "[Dark 2026]": {
       "comments": "#808897",
       "textMateRules": [
         {

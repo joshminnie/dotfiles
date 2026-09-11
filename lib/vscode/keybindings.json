@@ -1,0 +1,132 @@
+[
+  {
+    "key": "ctrl+cmd+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "-editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+cmd+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+up",
+    "command": "-editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+shift+up",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+up",
+    "command": "-editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+down",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+down",
+    "command": "-editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+r",
+    "command": "workbench.action.tasks.runTask"
+  },
+  {
+    "key": "f5",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Start server"
+  },
+  {
+    "key": "cmd+r cmd+r",
+    "command": "workbench.action.tasks.runTask",
+    "args": "RSpec: Run current file",
+    "when": "resourceFilename =~ /.*_spec\\.rb$/"
+  },
+  {
+    "key": "cmd+r cmd+e",
+    "command": "workbench.action.tasks.runTask",
+    "args": "RSpec: Run current example",
+    "when": "resourceFilename =~ /.*_spec\\.rb$/"
+  },
+  {
+    "key": "cmd+r cmd+r",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Cucumber: Run current file",
+    "when": "resourceExtname == .feature"
+  },
+  {
+    "key": "cmd+r cmd+e",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Cucumber: Run current scenario",
+    "when": "resourceExtname == .feature"
+  },
+  {
+    "key": "ctrl+cmd+shift+r",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Rubocop: Lint current file"
+  },
+  {
+    "key": "cmd+k cmd+l",
+    "command": "editor.action.transformToLowercase",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "cmd+k cmd+u",
+    "command": "editor.action.transformToUppercase",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+cmd+g",
+    "command": "editor.action.selectHighlights",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "-editor.action.selectHighlights",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "editor.action.insertCursorAtEndOfEachLineSelected",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+i",
+    "command": "-editor.action.insertCursorAtEndOfEachLineSelected",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+cmd+right",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+cmd+left",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+cmd+c",
+    "command": "workbench.files.action.collapseExplorerFolders"
+  }
+]
