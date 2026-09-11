@@ -67,7 +67,7 @@
   // Editor
   // -----------------------------------------------------------------------------
   "editor.detectIndentation": false,
-  "editor.fontFamily": "SourceCodeProRoman-Light, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "SourceCodePro-Light, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 13,
   "editor.fontLigatures": true,
   "editor.fontWeight": "200",
