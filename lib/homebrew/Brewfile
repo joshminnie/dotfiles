@@ -4,7 +4,7 @@
 # ---------------------------------------------
 brew "git"
 brew "libyaml"
-brew "node@20"
+brew "node@24"
 brew "postgresql@15", restart_service: true
 brew "python@3.12"
 brew "uv"
@@ -45,7 +45,6 @@ cask "bruno"
 cask "cleanmymac"
 cask "cleanmymac-cli"
 cask "docker-desktop"
-cask "drawio"
 cask "google-chrome", args: { require_sha: false }
 cask "iterm2"
 cask "notion"
@@ -56,6 +55,10 @@ if ENV["COMPANY"] == "HOME"
   cask "discord"
   cask "fantastical"
   cask "spotify"
+end
+
+if ENV["COMPANY"] == "DELUXE"
+  cask "drawio"
 end
 
 # Applications
