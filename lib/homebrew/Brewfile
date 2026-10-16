@@ -22,7 +22,7 @@ brew "openssl@3"
 brew "automake"
 brew "gnupg"
 
-if ENV["COMPANY"] == "DELUXE"
+if ENV["HOMEBREW_COMPANY"] == "DELUXE"
   brew "ghostscript"
   brew "imagemagick@6", link: true
   brew "memcached", restart_service: true
@@ -51,13 +51,13 @@ cask "notion"
 cask "visual-studio-code"
 cask "zoom"
 
-if ENV["COMPANY"] == "HOME"
+if ENV["HOMEBREW_COMPANY"] == "HOME"
   cask "discord"
   cask "fantastical"
   cask "spotify"
 end
 
-if ENV["COMPANY"] == "DELUXE"
+if ENV["HOMEBREW_COMPANY"] == "DELUXE"
   cask "drawio"
 end
 
@@ -119,11 +119,11 @@ vscode "vscjava.vscode-java-test"
 vscode "vscjava.vscode-maven"
 vscode "vscode-icons-team.vscode-icons"
 
-if ENV["COMPANY"] == "DELUXE"
+if ENV["HOMEBREW_COMPANY"] == "DELUXE"
   vscode "jetbrains.resharper-code"
 end
 
-if ENV["COMPANY"] == "HOME"
+if ENV["HOMEBREW_COMPANY"] == "HOME"
   vscode "golang.go"
 end
 
