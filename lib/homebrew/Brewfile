@@ -27,6 +27,7 @@ if ENV["HOMEBREW_COMPANY"] == "DELUXE"
   brew "imagemagick@6", link: true
   brew "memcached", restart_service: true
   brew "mysql@8.0", restart_service: true
+  brew "opencode"
   brew "opensearch", restart_service: true
   brew "pdftk-java"
   brew "rust"
@@ -59,6 +60,7 @@ end
 
 if ENV["HOMEBREW_COMPANY"] == "DELUXE"
   cask "drawio"
+  cask "openchamber"
 end
 
 # Applications
