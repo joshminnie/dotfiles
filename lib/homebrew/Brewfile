@@ -68,6 +68,7 @@ end
 cask_args require_sha: false # Most fonts don't have a SHA defined.
 cask "font-roboto-mono"
 cask "font-source-code-pro"
+cask "font-open-sans"
 
 # VS Code Extensions
 # ---------------------------------------------
